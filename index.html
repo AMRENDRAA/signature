@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature</title>
+    <style>
+    
+    .main{
+         max-width: 800px;
+         width: 100%;
+         margin: auto;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+    }
+
+        .canvas {
+            border: 2px solid black;
+        }
+        .top1, .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0 20px;
+        }
+        .block, input, select, button {
+            width: 80%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+
+</head>
+<body>
+    <div class="main">
+        <div class="top1">
+            <div class="black">
+                <p>Text color picker</p>
+                <input class="form-control" id="colorpicker" type="color"> 
+            </div>
+            <div class="black">
+                <p>Background</p>
+                <input class="form-control" id="canvasColor" type="color"> 
+            </div>
+            <div class="black">
+                <p>Font size</p>
+                <select id="fontpicker">
+                    <option value="5">5px</option>
+                    <option value="10">10px</option>
+                    <option value="20">20px</option>
+                    <option value="30">30px</option>
+                    <option value="40">40px</option>
+                    <option value="50">50px</option>
+                </select>
+            </div>
+        </div>
+    
+
+    <canvas class="canvas" id="myCanvas" width="800" height="500"></canvas>
+    
+    <div class="bottom">
+        <button type="button" class="btn btn-danger" id="clear">CLEAR</button>
+        <button type="button" class="btn btn-success" id="save">Save and Download</button>
+        <button type="button" class="btn btn-warning" id="retrieve">Save and Retrieve</button>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9L6R9amBnjTl+5pi8xVCC4pg8+Ph207ogq3" crossorigin="anonymous"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <script src="index.js"></script>
+</body>
+</html>
