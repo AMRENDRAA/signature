@@ -42,7 +42,7 @@ canvas.addEventListener('mouseup',()=>{
     isDrawing=false;
 })
 canvasColor.addEventListener('input',(e)=>{
-    ctx.fillstyle=e.target.value;
+    ctx.fillStyle=e.target.value;
     // ctx.fillstyle=colorPicker.value;
     console.log("ctx.fillstyle",colorPicker.value,e.target.value)
    ctx.fillRect(0,0,800,500);
