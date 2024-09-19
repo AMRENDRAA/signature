@@ -42,7 +42,7 @@ canvas.addEventListener('mouseup',()=>{
     isDrawing=false;
 })
 canvasColor.addEventListener('input',(e)=>{
-    ctx.fillstyle=e.target.value;
+    ctx.fillStyle=e.target.value;
     // ctx.fillstyle=colorPicker.value;
     console.log("ctx.fillstyle",colorPicker.value,e.target.value)
    ctx.fillRect(0,0,800,500);
@@ -53,4 +53,16 @@ canvasColor.addEventListener('input',(e)=>{
 fontpicker.addEventListener('change',(e)=>{
 ctx.lineWidth=e.target.value;
 
+})
+clearButton.addEventListener('click',(e)=>{
+    ctx.clearRect(0,0,canvas.width,canvas.clientHeight);
+
+})
+saveButton.addEventListener('click',(e)=>{
+
+    localStorage.setItem('canvasContents',canvas.toDataURL());
+    let link=document.createElement('a');
+    link.download='my-canvas.png';
+    link.href=canvas.toDataURL();
+    link.click();
 })
