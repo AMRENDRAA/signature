@@ -54,7 +54,6 @@ fontpicker.addEventListener('change',(e)=>{
 ctx.lineWidth=e.target.value;
 
 })
-<<<<<<< HEAD
 clearButton.addEventListener('click',(e)=>{
     ctx.clearRect(0,0,canvas.width,canvas.clientHeight);
 
@@ -67,5 +66,17 @@ saveButton.addEventListener('click',(e)=>{
     link.href=canvas.toDataURL();
     link.click();
 })
-=======
->>>>>>> 9b2a9ce4f5a1db40bec22fd3bef1050c3263c7a3
+
+retrievebutton.addEventListener('click', () => {
+    let savedCanvas = localStorage.getItem('canvasContents');
+    if (savedCanvas) {
+        let img = new Image();
+        img.src = savedCanvas;
+        img.onload = () => {
+            ctx.drawImage(img, 0, 0);
+        };
+    }
+})
+
+
+
