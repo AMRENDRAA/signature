@@ -66,17 +66,3 @@ saveButton.addEventListener('click',(e)=>{
     link.href=canvas.toDataURL();
     link.click();
 })
-
-retrievebutton.addEventListener('click', () => {
-    let savedCanvas = localStorage.getItem('canvasContents');
-    if (savedCanvas) {
-        let img = new Image();
-        img.src = savedCanvas;
-        img.onload = () => {
-            ctx.drawImage(img, 0, 0);
-        };
-    }
-})
-
-
-
